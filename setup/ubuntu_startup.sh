@@ -33,8 +33,13 @@ echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bashrc
 echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.bashrc
 echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.bashrc
 
+nvm install 16
+nvm install 18
+nvm install 20
+nvm use 16
 source ~/.bashrc
 
-wget "https://occ-sh.s3.us-east-2.amazonaws.com/discord/basic_message.sh"
-
-sudo chmod +x ./basic_message.sh
+mkdir ~/tools
+cd ~/tools
+wget "https://occ-sh.s3.us-east-2.amazonaws.com/discord/message_channel_via_webhook.sh"
+sudo chmod +x ./message_channel_via_webhook.sh
