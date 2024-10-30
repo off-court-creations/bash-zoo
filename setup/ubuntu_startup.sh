@@ -28,6 +28,13 @@ tmux new-window -t "admin" -n "about" "fastfetch; read -n1 -r -p 'Press any key 
 
 # NVM setup
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+
+echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bashrc
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.bashrc
+echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.bashrc
+
+source ~/.bashrc
+
+wget "https://occ-sh.s3.us-east-2.amazonaws.com/discord/basic_message.sh"
+
+sudo chmod +x ./basic_message.sh
