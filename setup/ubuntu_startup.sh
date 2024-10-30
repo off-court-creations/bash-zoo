@@ -18,6 +18,7 @@ cmake ..
 make
 sudo make install
 cd ../..
+rm -rf fastfetch
 
 # Tmux setup
 tmux new -d -s "admin"
